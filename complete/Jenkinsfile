@@ -13,7 +13,7 @@ pipeline {
     stage('Build') {
       steps {
        //sh 'mvn clean package'
-         sh ./gradlew build clean'
+        // sh ./gradlew build clean'
          sh 'docker build -t matsandy/gradlelari:lts .'
        //sh 'docker-compose build'
       }
