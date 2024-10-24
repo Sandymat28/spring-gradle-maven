@@ -28,7 +28,8 @@ pipeline {
       steps {
         echo 'Building image...'
         dir("${PROJECT_DIR}") {
-        sh 'docker build -t matsandy/spring-gradle:latest .'
+        sh 'docker build -t matsandy/spring-gradle:latest . -f /complete/Dockerfile'
+        //sh 'docker build -t matsandy/spring-gradle:latest .'
         }
       }
     }
